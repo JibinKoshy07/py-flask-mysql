@@ -1,0 +1,46 @@
+<DOCTYPE html>
+<head>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,th{
+            border: 1px solid;
+            text-align: left;
+            padding: 5px;
+        }
+        tr:nth-child(even){
+            background-color: rgb(235, 235, 235);
+        }
+    </style>
+</head>
+</body>
+<h1>
+Product list!!
+</h1>
+
+{% if result  %}
+
+    <table id="" style="width:100%"></tbody><tr>
+        <th>name</th>
+        <th>price</th>
+        <th>ID</th>
+    </tr>
+
+{% for row in result %}
+<tr>
+    <td>{{row.name}}</td>
+    <td>{{row.price}}</td>
+    <td>{{row.pid}}</td>
+</tr>
+
+{% endfor %}
+</tbody>
+</table>
+{% endif %}
+
+<body>
+    
+</html >
